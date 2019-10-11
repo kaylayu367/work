@@ -1,0 +1,51 @@
+---
+title: "DDAPR Existing Product Catalog"
+author: "Ying Yu"
+date: "10/09/2019"
+output: html_document
+---
+
+## Overview by DDWG Presentations
+* Buprenorphine Analysis
+* DOC Arrest Analysis
+
+### Buprenorphine Analysis 
+* Last Updated -- 04/25/2019
+* Deliverables: 
+  + [DDWG Presentation]("https://teams.microsoft.com/_#/files/Drug?groupId=ac8a7029-cd04-41d0-ba34-863dee8af5a4&threadId=19%3A0300ec76c85f4a4d897bc764bcfc5274%40thread.skype&ctx=channel&context=DDWG%2520Presentations")
+  + [MOAD Buprenorphien Dashboard]("")
+* Scripts: 
+  + [SQL Joining Datasets]("")
+  + [R Overdose Death]("")
+  + [R Non-fatal Overdose and Arrest]("")
+
+#### User Story
+Dr. Melissa Collier, ISDH Chief Medical Director -- “As a medical director for ISDH, I want to stratify outcomes following overdose events (death, arrests, ED visits, opioid prescriptions) by buprenorphine and/or methadone prescription yes/no by county, so that I can understand how medication affects some of the things we’re trying to prevent, and help prioritize resources (i.e. which counties need opioid treatment programs (OTPs) or harm reduction sites)”
+
+#### Research Questions
+* Of individuals receiving buprenorphine, do those that start treatment soon after an opioid overdose emergency medical event (OR-EME) have better outcomes than those who get treatment later or those who have never had an OR-EME prior to treatment?
+* What variables lead to better or worse outcomes for individuals who receive buprenorphine treatment?
+
+#### Research Method 
+* Survival Analysis 
+
+#### Tables Used 
+* Prescription Drug – DRUG_DW_SCHEMA.PLA_AWARE_RX_ALL
+* ED – DRUG_DW_SCHEMA.DSHB_ISDH_PHESS_OPIOID_ED_VISITS
+* EMS – MPH_STAGE_SCHEMA.DHS_EMS_BASE_STG
+* ARREST – ISP_CHRIS_SCHEMA.ISP_CHRIS_US11
+* DEATH
+  + DRUG_DW_SCHEMA.ISDH_VITAL_DEATH_F_DEMOGRAPHICS
+  + DRUG_DW_SCHEMA.ISDH_VITAL_DEATH_F_MEDICAL
+
+#### Outcomes
+* Higher Risk of Overdoes Death
+  + White
+  + Male
+  + Buprenorphine treatment started more than 30 days after an OR-EME
+  + Buprenorphine includes naloxone (Suboxone instead of Subutex)
+  + Lower daily dosage of buprenorphine, or very high dosage (>20mg)
+  + Benzodiazepine prescription after treatment started
+  + Non-fatal OR-EME after treatment started
+  + ZIP codes with higher vulnerability based on minority status/language
+
